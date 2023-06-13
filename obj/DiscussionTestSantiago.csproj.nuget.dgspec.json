@@ -1,0 +1,272 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\nates\\Source\\Repos\\Fall2022ProjectSantiago\\Fall2022DiscussionSolutionSantiago\\DiscussionTestSantiago\\DiscussionTestSantiago.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\nates\\Source\\Repos\\Fall2022ProjectSantiago\\Fall2022DiscussionSolutionSantiago\\DiscussionLibrarySantiago\\DiscussionLibrarySantiago.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\nates\\Source\\Repos\\Fall2022ProjectSantiago\\Fall2022DiscussionSolutionSantiago\\DiscussionLibrarySantiago\\DiscussionLibrarySantiago.csproj",
+        "projectName": "DiscussionLibrarySantiago",
+        "projectPath": "C:\\Users\\nates\\Source\\Repos\\Fall2022ProjectSantiago\\Fall2022DiscussionSolutionSantiago\\DiscussionLibrarySantiago\\DiscussionLibrarySantiago.csproj",
+        "packagesPath": "C:\\Users\\nates\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nates\\source\\repos\\Fall2022ProjectSantiago\\Fall2022DiscussionSolutionSantiago\\DiscussionLibrarySantiago\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\nates\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Extensions.Identity.Stores": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\nates\\Source\\Repos\\Fall2022ProjectSantiago\\Fall2022DiscussionSolutionSantiago\\DiscussionMvcSantiago\\DiscussionMvcSantiago.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\nates\\Source\\Repos\\Fall2022ProjectSantiago\\Fall2022DiscussionSolutionSantiago\\DiscussionMvcSantiago\\DiscussionMvcSantiago.csproj",
+        "projectName": "DiscussionMvcSantiago",
+        "projectPath": "C:\\Users\\nates\\Source\\Repos\\Fall2022ProjectSantiago\\Fall2022DiscussionSolutionSantiago\\DiscussionMvcSantiago\\DiscussionMvcSantiago.csproj",
+        "packagesPath": "C:\\Users\\nates\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nates\\Source\\Repos\\Fall2022ProjectSantiago\\Fall2022DiscussionSolutionSantiago\\DiscussionMvcSantiago\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\nates\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\nates\\Source\\Repos\\Fall2022ProjectSantiago\\Fall2022DiscussionSolutionSantiago\\DiscussionLibrarySantiago\\DiscussionLibrarySantiago.csproj": {
+                "projectPath": "C:\\Users\\nates\\Source\\Repos\\Fall2022ProjectSantiago\\Fall2022DiscussionSolutionSantiago\\DiscussionLibrarySantiago\\DiscussionLibrarySantiago.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MailKit": {
+              "target": "Package",
+              "version": "[3.6.0, )"
+            },
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.15, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[6.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.15, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.13, )"
+            },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[3.6.1, )"
+            },
+            "xunit.extensibility.core": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.extensibility.execution": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\nates\\Source\\Repos\\Fall2022ProjectSantiago\\Fall2022DiscussionSolutionSantiago\\DiscussionTestSantiago\\DiscussionTestSantiago.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\nates\\Source\\Repos\\Fall2022ProjectSantiago\\Fall2022DiscussionSolutionSantiago\\DiscussionTestSantiago\\DiscussionTestSantiago.csproj",
+        "projectName": "DiscussionTestSantiago",
+        "projectPath": "C:\\Users\\nates\\Source\\Repos\\Fall2022ProjectSantiago\\Fall2022DiscussionSolutionSantiago\\DiscussionTestSantiago\\DiscussionTestSantiago.csproj",
+        "packagesPath": "C:\\Users\\nates\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nates\\source\\repos\\Fall2022ProjectSantiago\\Fall2022DiscussionSolutionSantiago\\DiscussionTestSantiago\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\nates\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\nates\\Source\\Repos\\Fall2022ProjectSantiago\\Fall2022DiscussionSolutionSantiago\\DiscussionMvcSantiago\\DiscussionMvcSantiago.csproj": {
+                "projectPath": "C:\\Users\\nates\\Source\\Repos\\Fall2022ProjectSantiago\\Fall2022DiscussionSolutionSantiago\\DiscussionMvcSantiago\\DiscussionMvcSantiago.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.1.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.18.2, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
