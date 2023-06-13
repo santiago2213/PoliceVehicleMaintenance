@@ -11,17 +11,18 @@ namespace DiscussionLibrarySantiago
     {
         [Key]
         public int NoteId { get; set; }
-        public string Description { get; set; }
-        public DateTime? NoteCreated { get; set; }
-        public string MechanicId { get; set; }
+        public string? Description { get; set; }
+        public DateTime NoteCreated { get; set; }
+        public string? MechanicId { get; set; }
         [ForeignKey("MechanicId")]
         public Mechanic? Mechanic { get; set; }
-        public string SupervisorId { get; set; }
+        public string? SupervisorId { get; set; }
         [ForeignKey("SupervisorId")]
         public Supervisor? Supervisor { get; set; }
         public int ServiceRequestId { get; set; }
         [ForeignKey("ServiceRequestId")]
         public ServiceRequest ServiceRequest { get; set; }
+        public string? Responses { get; set; }   
 
         public Notes(ServiceRequest serviceRequest, string description, DateTime noteCreated, Mechanic? mechanic, Supervisor? supervisor)
         {

@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nates\\source\\repos\\Fall2022ProjectSantiago\\Fall2022DiscussionSolutionSantiago\\DiscussionLibrarySantiago\\DiscussionLibrarySantiago.csproj": {}
+    "C:\\Users\\nates\\Source\\Repos\\Fall2022ProjectSantiago\\Fall2022DiscussionSolutionSantiago\\DiscussionLibrarySantiago\\DiscussionLibrarySantiago.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nates\\source\\repos\\Fall2022ProjectSantiago\\Fall2022DiscussionSolutionSantiago\\DiscussionLibrarySantiago\\DiscussionLibrarySantiago.csproj": {
+    "C:\\Users\\nates\\Source\\Repos\\Fall2022ProjectSantiago\\Fall2022DiscussionSolutionSantiago\\DiscussionLibrarySantiago\\DiscussionLibrarySantiago.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nates\\source\\repos\\Fall2022ProjectSantiago\\Fall2022DiscussionSolutionSantiago\\DiscussionLibrarySantiago\\DiscussionLibrarySantiago.csproj",
+        "projectUniqueName": "C:\\Users\\nates\\Source\\Repos\\Fall2022ProjectSantiago\\Fall2022DiscussionSolutionSantiago\\DiscussionLibrarySantiago\\DiscussionLibrarySantiago.csproj",
         "projectName": "DiscussionLibrarySantiago",
-        "projectPath": "C:\\Users\\nates\\source\\repos\\Fall2022ProjectSantiago\\Fall2022DiscussionSolutionSantiago\\DiscussionLibrarySantiago\\DiscussionLibrarySantiago.csproj",
+        "projectPath": "C:\\Users\\nates\\Source\\Repos\\Fall2022ProjectSantiago\\Fall2022DiscussionSolutionSantiago\\DiscussionLibrarySantiago\\DiscussionLibrarySantiago.csproj",
         "packagesPath": "C:\\Users\\nates\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\nates\\source\\repos\\Fall2022ProjectSantiago\\Fall2022DiscussionSolutionSantiago\\DiscussionLibrarySantiago\\obj\\",
         "projectStyle": "PackageReference",

@@ -12,7 +12,7 @@ namespace DiscussionLibrarySantiago
     {
         [Key]
         public int ServiceRequestId { get; set; }
-        public string Description { get; set; }
+        public string? Description { get; set; }
         public DateTime DateServiceRequested { get; set; }
         public DateTime? DateServiced { get; set; }
         public int VehicleId { get; set; } //RDB Connection

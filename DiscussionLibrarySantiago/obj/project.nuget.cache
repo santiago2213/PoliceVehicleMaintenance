@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2g8Dkbl5Z8fkuDC74cLM69nDFqeFWec7YMC5k0lL1EAuY0nIEjYCyewGEB5AU2WWgYsdSlpJ2BHdCT8IBiaW8Q==",
+  "dgSpecHash": "yXjwR0znTRyzPs7PZ0sTGe/21yYgI7N7XMwpmqyqBIxEuTPW8WV6PTHOiazNDC2eFLh3QZl6NCwgEyVcrr6ryw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\nates\\source\\repos\\Fall2022ProjectSantiago\\Fall2022DiscussionSolutionSantiago\\DiscussionLibrarySantiago\\DiscussionLibrarySantiago.csproj",
+  "projectFilePath": "C:\\Users\\nates\\Source\\Repos\\Fall2022ProjectSantiago\\Fall2022DiscussionSolutionSantiago\\DiscussionLibrarySantiago\\DiscussionLibrarySantiago.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nates\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.10\\microsoft.aspnetcore.cryptography.internal.6.0.10.nupkg.sha512",
     "C:\\Users\\nates\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.10\\microsoft.aspnetcore.cryptography.keyderivation.6.0.10.nupkg.sha512",
