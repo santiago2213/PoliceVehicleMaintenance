@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DiscussionLibrarySantiago.Vehicle">
+    <Position X="4" Y="7.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAIAAIAABAAAAABAAAAAAAQAAIAAgAAAAAgAAAIAAgA=</HashCode>
+      <FileName>Vehicle.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="VehicleServiceRequests" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DiscussionLibrarySantiago.ServiceRequest">
+    <Position X="8.25" Y="7.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAIEAAAAAgAAAIAAAAAAACBAAEggCAAQAIEACAAAA=</HashCode>
+      <FileName>ServiceRequest.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Vehicle" />
+      <Property Name="Supervisor" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="ServiceRequestNotes" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DiscussionLibrarySantiago.AppUser">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AppUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DiscussionLibrarySantiago.Officer">
+    <Position X="7" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Officer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="ServiceRequestsSubmitted" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DiscussionLibrarySantiago.Supervisor">
+    <Position X="4.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAgAAAAAAAA=</HashCode>
+      <FileName>Supervisor.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="ServiceRequestsDecided" />
+      <Property Name="SupervisorNotes" />
+      <Property Name="OfficersSupervised" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DiscussionLibrarySantiago.Mechanic">
+    <Position X="10" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mechanic.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="ServiceRequestWorkedOn" />
+      <Property Name="MechanicNotes" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DiscussionLibrarySantiago.Notes">
+    <Position X="12.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAgAIAIAAAAAAAAACAAAgAAAQBIAAAAAAA=</HashCode>
+      <FileName>Notes.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Mechanic" />
+      <Property Name="Supervisor" />
+      <Property Name="ServiceRequest" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DiscussionLibrarySantiago.SupervisorOfficer">
+    <Position X="4.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAACAAAAAAAAAABAAAAEAQAAAQAAAACAAAA=</HashCode>
+      <FileName>SupervisorOfficer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Supervisor" />
+      <Property Name="Officer" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DiscussionLibrarySantiago.VehicleMake">
+    <Position X="5.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAACgAACAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>VehicleMake.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="VehicleModels" />
+      <Property Name="Vehicles" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DiscussionLibrarySantiago.VehicleModel">
+    <Position X="3" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEgAACAAAAAAAAAAAAAAAgAAgAAAAAAAA=</HashCode>
+      <FileName>VehicleModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="VehicleMake" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Vehicles" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

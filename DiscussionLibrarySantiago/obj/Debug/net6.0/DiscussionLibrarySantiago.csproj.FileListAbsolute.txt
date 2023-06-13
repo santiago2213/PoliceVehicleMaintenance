@@ -1,0 +1,12 @@
+C:\Users\nates\Source\Repos\Fall2022ProjectSantiago\Fall2022DiscussionSolutionSantiago\DiscussionLibrarySantiago\bin\Debug\net6.0\DiscussionLibrarySantiago.deps.json
+C:\Users\nates\Source\Repos\Fall2022ProjectSantiago\Fall2022DiscussionSolutionSantiago\DiscussionLibrarySantiago\bin\Debug\net6.0\DiscussionLibrarySantiago.dll
+C:\Users\nates\Source\Repos\Fall2022ProjectSantiago\Fall2022DiscussionSolutionSantiago\DiscussionLibrarySantiago\bin\Debug\net6.0\DiscussionLibrarySantiago.pdb
+C:\Users\nates\Source\Repos\Fall2022ProjectSantiago\Fall2022DiscussionSolutionSantiago\DiscussionLibrarySantiago\obj\Debug\net6.0\DiscussionLibrarySantiago.csproj.AssemblyReference.cache
+C:\Users\nates\Source\Repos\Fall2022ProjectSantiago\Fall2022DiscussionSolutionSantiago\DiscussionLibrarySantiago\obj\Debug\net6.0\DiscussionLibrarySantiago.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nates\Source\Repos\Fall2022ProjectSantiago\Fall2022DiscussionSolutionSantiago\DiscussionLibrarySantiago\obj\Debug\net6.0\DiscussionLibrarySantiago.AssemblyInfoInputs.cache
+C:\Users\nates\Source\Repos\Fall2022ProjectSantiago\Fall2022DiscussionSolutionSantiago\DiscussionLibrarySantiago\obj\Debug\net6.0\DiscussionLibrarySantiago.AssemblyInfo.cs
+C:\Users\nates\Source\Repos\Fall2022ProjectSantiago\Fall2022DiscussionSolutionSantiago\DiscussionLibrarySantiago\obj\Debug\net6.0\DiscussionLibrarySantiago.csproj.CoreCompileInputs.cache
+C:\Users\nates\Source\Repos\Fall2022ProjectSantiago\Fall2022DiscussionSolutionSantiago\DiscussionLibrarySantiago\obj\Debug\net6.0\DiscussionLibrarySantiago.dll
+C:\Users\nates\Source\Repos\Fall2022ProjectSantiago\Fall2022DiscussionSolutionSantiago\DiscussionLibrarySantiago\obj\Debug\net6.0\refint\DiscussionLibrarySantiago.dll
+C:\Users\nates\Source\Repos\Fall2022ProjectSantiago\Fall2022DiscussionSolutionSantiago\DiscussionLibrarySantiago\obj\Debug\net6.0\DiscussionLibrarySantiago.pdb
+C:\Users\nates\Source\Repos\Fall2022ProjectSantiago\Fall2022DiscussionSolutionSantiago\DiscussionLibrarySantiago\obj\Debug\net6.0\ref\DiscussionLibrarySantiago.dll
