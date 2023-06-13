@@ -1,0 +1,128 @@
+﻿@using DiscussionLibrarySantiago;
+@model SearchVehiclesViewModel
+@{
+    ViewData["Title"] = "Search Vehicles";
+}
+
+<h1>Search Vehicles</h1>
+
+<form asp-controller="Vehicle" asp-action="SearchVehicles" method="post">
+
+    <div class="form-group">
+        <label>Mileage</label>
+        <input asp-for="SearchMileage" class="form-control"/>
+    </div>
+
+    <div class="form-group">
+        <label>Purchase Date</label>
+        <input asp-for="SearchPurchaseDate" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Service Date</label>
+        <input asp-for="SearchServicedDate" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Vehicle Status</label>
+        @Html.DropDownListFor(vm => vm.VehicleStatus, new SelectList(Enum.GetNames(typeof(VehicleStatusOptions))),
+        "-- Select a Status --")
+    </div>
+
+    <div class="form-group">
+        <label>Vehicle Make</label>
+        <select asp-for="SearchVehicleMakeId" asp-items="ViewBag.AllMakes" 
+        class="form-control" id="VehicleMakeId">
+            <option value="">None Selected</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Vehicle Model</label>
+        <select asp-for="SearchVehicleModelId" class="form-control" 
+        id="VehicleModelId">
+           @* <option value="">None Selected</option>*@
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Search Vehicles</button>
+
+</form>
+
+@if(Model.SearchResult != null) 
+{
+    if (Model.SearchResult.Any())
+    {
+        <table id="myTable" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+
+                    <th>VIN</th>
+                    <th>Make</th>
+                    <th>Model</th>
+                    <th>Year</th>
+                    <th>Purchase Date</th>
+                    <th>Serviced Date</th>
+                    <th>Mileage</th>
+                    <th>Date Added</th>
+                    <th>Supervisor</th>
+                    <th>Edit Vehicle</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach(Vehicle eachVehicle in Model.SearchResult)
+                {
+                    <tr>
+                        <td>@eachVehicle.VIN</td>
+                        <td>@eachVehicle.VehicleMake.VehicleMakeName</td>
+                        <td>@eachVehicle.VehicleModel.VehicleModelName</td>
+                        <td>@eachVehicle.Year</td>
+                        <td>@eachVehicle.DatePurchased.ToShortDateString()</td>
+                        <!--Condition Here-->
+                        @if (eachVehicle.VehicleServiceRequests.Any())
+                        {
+                            if (eachVehicle.VehicleServiceRequests.Any(vsr => vsr.DateServiced.HasValue))
+                            {
+                                <td>@eachVehicle.FindLastDateServiced()</td>
+                                <!-- Answer which Vehicles have not been serviced: Not been serviced-->
+                            }
+                            else
+                            {
+                                <td> @("Being Serviced. Service Not Completed")</td>
+                            }
+                        }
+                        else
+                        {
+                            <td> @("No Service Requests")</td>
+                        }
+                        <td>@eachVehicle.Mileage</td>
+                        <td>@eachVehicle.VehicleAddedDateTime</td>
+                        
+                        @if(eachVehicle.VehicleAddedBySupervisorId != null)
+                        {
+                            <td>@eachVehicle.VehicleAddedBySupervisor.Fullname</td>
+                        }
+                        else
+                        {
+                            <td>@("Not added by a supervisor")</td>
+                        }
+
+                        <td><a asp-action="EditVehicle" asp-route-vehicleId="@eachVehicle.VehicleId">Edit</a> </td>
+
+                        
+                    </tr> 
+                }
+        </tbody>
+        </table>
+    }
+    else
+    {
+        @("No Vehicles Matched Your Search Criteria")
+    }
+} <!--End of body of the search result display-->
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/js/FindModelForMake.js"></script>
+
+

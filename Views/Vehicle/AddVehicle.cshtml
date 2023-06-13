@@ -1,0 +1,56 @@
+﻿@model AddVehicleViewModel
+ 
+@{
+    ViewData["Title"] = "AddVehicle";
+}
+    <h1>AddVehicle</h1>
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <form asp-controller="Vehicle" asp-action="AddVehicle" method="post">
+
+        <div class="form-group">
+            <label>VIN</label>
+            <input asp-for="VIN" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label>Purchase Date</label>
+            <input asp-for="DatePurchased" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label>Vehicle Make</label>
+            <select asp-for="VehicleMakeId" 
+            asp-items="ViewBag.AllMakes" class="form-control" 
+            id="VehicleMakeId">
+                <option value="">None Selected</option>
+            </select>
+        </div>
+
+    @*asp-items="ViewBag.AllModels"*@
+        <div class="form-group" id="VehicleModelGroup">
+            <label>Vehicle Model</label>
+            <select asp-for="VehicleModelId" 
+            class="form-control" id="VehicleModelId">
+                @* <option value="">None Selected</option>*@
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Mileage</label>
+            <input asp-for="Mileage" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label>Year</label>
+            <input asp-for="Year" class="form-control" />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Add Vehicle</button>
+
+
+    </form>
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/js/FindModelForMake.js"></script>
+

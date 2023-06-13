@@ -1,0 +1,26 @@
+﻿@model MakeServiceRequestViewModel
+@{
+    ViewData["Title"] = "MakeServiceRequest";
+}
+
+<h1>MakeServiceRequest</h1>
+
+<div asp-validation-summary="All" class="text-danger"></div>
+<form asp-controller="ServiceRequest" asp-action="MakeServiceRequest" method="post">
+
+    <div class="form-group">
+        <label>VehicleId</label>
+        <select asp-for="VehicleId" 
+            asp-items="ViewBag.AllVehicles" 
+            class="form-control">
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Description</label>
+        <input asp-for="Description" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Make Service Request</button>
+
+</form>

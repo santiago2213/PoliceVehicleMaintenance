@@ -1,0 +1,141 @@
+﻿@*@model IEnumerable<ServiceRequest>*@
+@model SearchServiceRequestsViewModel
+@{
+    ViewData["Title"] = "SearchServiceRequests";
+}
+
+<h1>SearchServiceRequests</h1>
+
+<form asp-controller="ServiceRequest" asp-action="SearchServiceRequests" method="post">
+
+    <div class="form-group">
+        <label>VIN</label>
+        <select asp-for="SearchVIN" asp-items="ViewBag.AllVehicles" class="form-control" id="VIN"> <option value="">None Selected</option> </select>
+    </div>
+
+    <div class="form-group">
+        <label>Mechanic Fullname</label>
+        <select asp-for="SearchMechanicFullName" asp-items="ViewBag.AllMechanics" class="form-control" id="Id"> <option value="">None Selected</option> </select>
+    </div>
+    
+    @*<div class="form-group">
+        <label>Vehicle</label>
+        <select asp-for="SearchVehicle" asp-items="ViewBag.AllVehicles" class="form-control" id="VehicleId" > <option value="">None Selected</option> </select>
+    </div>
+
+    <div class="form-group">
+        <label>Date Service Requested</label>
+        <input asp-for="SearchDateServiceRequested" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Officer</label>
+       <select asp-for="SearchOfficer" asp-items="ViewBag.AllOfficers" class="form-control" id="OfficerId"> <option value="">None Selected</option> </select>
+    </div>*@
+
+    <button type="submit" class="btn btn-primary">Search Vehicles</button>
+
+</form>
+
+@if (Model.Result != null)
+{
+    if (Model.Result.Any())
+    {
+        <table class="table table-bordered table-striped">
+            <thead>
+            <tr>
+                    <th>VIN - Make - Model - Year</th>
+                    <th>Service Request Date</th>
+                    <th>Officer Name</th>
+                    <th>Supervisor</th>
+                    <th>Decision and Date Decided</th>
+                    <th>Notes</th>
+            </tr>
+            </thead>
+
+            <tbody>
+                @foreach (ServiceRequest eachServiceRequest in Model.Result)
+                {
+                    <tr>
+                        <td>@eachServiceRequest.Vehicle.VIN -
+                             @eachServiceRequest.Vehicle.VehicleMake.VehicleMakeName -
+                             @eachServiceRequest.Vehicle.VehicleModel.VehicleModelName -
+                             @eachServiceRequest.Vehicle.Year
+                        </td>
+
+                        <td>@eachServiceRequest.DateServiceRequested</td>
+                        <td>@eachServiceRequest.Officer.Fullname</td>
+                        <td>
+                            @if (eachServiceRequest.SupervisorId != null)
+                            {
+                                @eachServiceRequest.Supervisor.Fullname
+                            }
+                            else
+                            {
+                                @("No supervisor assigned")
+                            }
+                        </td>
+                        <td>
+                            @if(eachServiceRequest.SupervisorDecision.HasValue)
+                            {
+                                @(
+                                        "Current decision state: " + 
+                                        eachServiceRequest.SupervisorDecision.Value + 
+                                        " Supervisor decision date: " 
+                                        + eachServiceRequest.DateSupervisorDecision.Value.ToShortDateString()
+                                )
+                                    if(eachServiceRequest.DateServiced.HasValue)
+                                    {
+                                        @(" Date Serviced: " + eachServiceRequest.DateServiced.Value.ToShortDateString())
+                                    }
+
+                                
+                                if(eachServiceRequest.SupervisorDecision.Value != SupervisorDecisionOptions.denied)
+                                {
+                                    @(eachServiceRequest.Mechanic.Fullname + " assigned")
+                                }
+                            }
+                            else
+                            {
+                                @("Decision not made")
+                            }
+                            
+                            <td>
+                                @if(eachServiceRequest.ServiceRequestNotes.Any())
+                                {
+                                    @foreach(Notes eachNote in eachServiceRequest.ServiceRequestNotes)
+                                    {
+                                       <ul>
+                                           
+                                           <li>@(eachNote.Description + " " 
+                                               + eachNote.NoteCreated.ToShortDateString())
+                                               
+                                               @if(eachNote.MechanicId != null)
+                                                {
+                                                    @eachNote.Mechanic.Fullname
+                                                }
+                                                else
+                                                {
+                                                    @eachNote.Supervisor.Fullname
+                                                }
+
+                                           
+                                           </li>
+
+                                       </ul>
+                                    }
+ 
+                                }
+                            </td>
+                        </td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        @("No Service Requests Matched Your Search Criteria")
+    }
+}

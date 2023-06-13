@@ -1,0 +1,86 @@
+﻿@model IEnumerable<ServiceRequest>;
+@{
+    ViewData["Title"] = "Make Supervisor Response To Requests";
+}
+
+<h1>Make Supervisor Response To Requests</h1>
+
+@if (Model.Any())
+{
+
+    <form asp-controller="ServiceRequest"
+      asp-action="MakeSupervisorResponseToRequests" method="post">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>VIN - Make - Model - Year</th>
+                    <th>Service Request Date</th>
+                    <th>Officer Name</th>
+                    <th>Supervisor</th>
+                    <th>Mechanic</th>
+                    <th>Make Decision</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (ServiceRequest eachServiceRequest in Model)
+                {
+                    <tr>
+                        <td>
+                            @eachServiceRequest.Vehicle.VIN -
+                            @eachServiceRequest.Vehicle.VehicleMake.VehicleMakeName -
+                            @eachServiceRequest.Vehicle.VehicleModel.VehicleModelName -
+                            @eachServiceRequest.Vehicle.Year
+                        </td>
+
+                        <td>@eachServiceRequest.DateServiceRequested</td>
+                        <td>@eachServiceRequest.Officer.Fullname</td>
+                        <td>@eachServiceRequest.Supervisor.Fullname</td>
+                        <td>
+                            @if (eachServiceRequest.SupervisorId != null)
+                            {
+                                @eachServiceRequest.Supervisor.Fullname
+                            }
+                        </td>
+                        <td>
+                            @if (eachServiceRequest.MechanicId != null)
+                            {
+                                @eachServiceRequest.Mechanic.Fullname
+                            }
+                        </td>
+                        <td>
+                            <input type="hidden" name="ServiceRequestIds"
+                           value="@eachServiceRequest.ServiceRequestId" />
+
+                            <div class="form-group">
+                                <label>Decision</label>
+                                <select name="Decisions"
+                                asp-items="Html.GetEnumSelectList<SupervisorDecisionOptions>()"
+                                class="form-control">
+                                    <option value="">None</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Supervisor Note</label>
+                                <textarea name="SupervisorNotes" type="text" text-wrap:normal
+                                        class="form-control">
+                                </textarea>
+
+                            </div>
+
+
+                        </td>
+
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+
+        <button type="submit" class="btn btn-primary">Submit Decision</button>
+
+    </form>
+}
+
+
